@@ -1,0 +1,72 @@
+.header {
+    border-bottom: 3px #373867 solid;
+    margin-right: 15px;
+    margin-left: 290px;
+}
+.header .midia{
+    margin-left: 2050px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 30px;
+}
+.midia a{
+    text-decoration: none;
+    color: #373867;
+}
+.midia a:hover{
+    color: #AFAFC2;
+}
+.sidebar{
+    height:100%;
+    width: 268px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #AFAFC2;
+    padding-top: 20px;
+}
+.sidebar a{
+    padding:15px 16px 5px 28px;
+    text-decoration: none;
+    font-size:14px;
+    color: #373867;
+    display:block;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 
+    'Helvetica Neue', sans-serif;
+    
+}
+.sidebar a:hover{
+    color:#f1f1f1;
+}
+.sidebar p{
+    padding-top: 40px;
+    padding-bottom: 12px;
+    color: #373867;
+    font-weight: bolder;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 
+    'Helvetica Neue', sans-serif;
+    font-size:16px;
+}
+.bloque-bar{
+    border-bottom: 1.5px black solid;
+    padding-bottom: 30px;
+    margin-left:40px;
+    margin-right: 40px;
+}
+.sidebar .trackgenix-bar{
+    font-size: 20px;
+    margin-left: 40px;
+}
+.sidebar .texto-bar{
+    font-size:15px;
+    color:#373867;
+    font-weight: normal;
+    margin-left:40px;
+    margin-right: 40px;
+    padding: 15px;
+}
+.main {
+    margin-left:300px;
+    padding: 0px 10px;
+}

@@ -1,30 +1,28 @@
 .header {
     border-bottom: 3px #373867 solid;
-    margin-right: 15px;
-    margin-left: 290px;
-}
-.header .midia{
-    margin-left: 2050px;
+    font-size: 25px;
+    margin-right: 1%;
+    margin-left: 18%;
+    padding-left: 72.5%;
     padding-top: 15px;
     padding-bottom: 15px;
-    font-size: 30px;
+    text-align: end;
+    float: right;
+    position: relative;
+    width: 10%;
 }
-.midia a{
+.header a{
     text-decoration: none;
     color: #373867;
 }
-.midia a:hover{
+.header a:hover{
     color: #AFAFC2;
 }
 .sidebar{
     height:100%;
-    width: 268px;
+    width: 13%;
     position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
     background-color: #AFAFC2;
-    padding-top: 20px;
 }
 .sidebar a{
     padding:15px 16px 5px 28px;
@@ -65,13 +63,22 @@
     margin-left:40px;
     margin-right: 40px;
     padding: 15px;
+    text-align:justify;
+}
+.sidebar .menu-icon a i {
+    font-size: 35px;
+}
+.sidebar .menu-icon {
+    position: fixed;
+    left: 10%;
+    padding-top: 10px;
 }
 .main {
-    margin-left:300px;
+    margin-left:16%;
     padding: 0px 10px;
 }
 .main h1{
-    padding-top:50px;
+    padding-top:80px;
     font-size: 60px;
     color: #373867;
     font-weight: bolder;
@@ -86,4 +93,64 @@
     font-weight: normal;
     font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 
     'Helvetica Neue', sans-serif;
+}
+.main p{
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 
+    'Helvetica Neue', sans-serif;
+    font-size: 25px;
+    text-align:justify;
+}
+.main .presentation p{
+    padding-top: 30px;
+    padding-right: 43%;
+    margin-bottom: 45px;
+}
+.main .presentation img{
+    float:right;
+    margin-right: 15px;
+    margin-top: 12px;
+}
+.main .presentation a{
+    margin: 500px;
+    font-size: 15px;
+    font-weight: 1000;
+    color: #373867;
+    text-transform: uppercase;
+    background-color: #FFF;
+    padding: 10px 40px;
+    border: 2px solid #373867;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.main .presentation a:hover{
+    color: #AFAFC2;
+}
+.main .history h2{
+    margin-top: 60px;
+    margin-bottom: 40px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    font-size: 60px;
+    color: #373867;
+    font-weight:700;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 
+    'Helvetica Neue', sans-serif;
+}
+.main .history {
+    float: right;
+    margin-top: 56px;
+    padding-right: 15px;
+}
+.main .history .img1-history {
+   float: left;
+   padding-right: 20px;
+}
+
+.main .history .img2-history {
+    float: right;
+    padding-left: 20px;
+    padding-right: 10px;
+}
+.main .functions{
+    margin-top: 1200px;
 }

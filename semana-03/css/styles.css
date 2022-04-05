@@ -252,15 +252,15 @@
 .footer a:hover{
     color: #AFAFC2;
 }
-.pagination a {
+.footer .pagination a {
     padding: 8px 16px;
     transition: background-color .3s;
 }
-.pagination a.active {
+.footer .pagination a.active {
     background-color: dodgerblue;
     color: white;
 }
-.pagination .prev{
+.footer .pagination .prev{
     font-size: 15px;
     font-weight: 1000;
     color: #373867;
@@ -270,7 +270,7 @@
     border: 2px solid #373867;
     border-radius: 5px;
 }
-.pagination .next{
+.footer .pagination .next{
     font-size: 15px;
     font-weight: 1000;
     color: #373867;
@@ -280,14 +280,18 @@
     border: 2px solid #373867;
     border-radius: 5px;
 }
-.pagination a:hover:not(.active){
+.footer .pagination a:hover:not(.active){
     background-color: #ddd;
 }
-.linea {
+.footer .linea {
     text-align: center;
     border-bottom: 2px black solid;
     margin-left: 20%;
     margin-right: 15%;
     padding-top: 40px;
     margin-bottom: 20px;
+}
+.social-footer{
+    font-size: 30px;
+    padding-bottom: 20px;
 }

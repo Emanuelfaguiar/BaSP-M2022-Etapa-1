@@ -11,20 +11,24 @@
     position: relative;
     width: 10%;
 }
+
 .header a{
     text-decoration: none;
     color: #373867;
 }
-.header a:hover{
+
+.header a:hover {
     color: #AFAFC2;
 }
-.sidebar{
+
+.sidebar {
     height:100%;
     width: 13%;
     position: fixed;
     background-color: #AFAFC2;
 }
-.sidebar a{
+
+.sidebar a {
     padding:15px 16px 5px 28px;
     text-decoration: none;
     font-size:18px;
@@ -34,10 +38,12 @@
     'Helvetica Neue', sans-serif;
     
 }
-.sidebar a:hover{
+
+.sidebar a:hover {
     color:#f1f1f1;
 }
-.sidebar p{
+
+.sidebar p {
     padding-top: 40px;
     padding-bottom: 12px;
     color: #373867;
@@ -46,17 +52,20 @@
     'Helvetica Neue', sans-serif;
     font-size:25px;
 }
-.bloque-bar{
+
+.bloque-bar {
     border-bottom: 1.5px black solid;
     padding-bottom: 30px;
     margin-left:40px;
     margin-right: 40px;
 }
-.sidebar .trackgenix-bar{
+
+.sidebar .trackgenix-bar {
     font-size: 30px;
     margin-left: 40px;
 }
-.sidebar .texto-bar{
+
+.sidebar .texto-bar {
     font-size:18px;
     color:#373867;
     font-weight: normal;
@@ -65,19 +74,23 @@
     padding: 15px;
     text-align:justify;
 }
+
 .sidebar .menu-icon a i {
     font-size: 35px;
 }
+
 .sidebar .menu-icon {
     position: fixed;
     left: 10%;
     padding-top: 10px;
 }
+
 .main {
     margin-left:16%;
     padding: 0px 10px;
 }
-.main h1{
+
+.main h1 {
     padding-top:80px;
     font-size: 60px;
     color: #373867;
@@ -86,7 +99,8 @@
     'Helvetica Neue', sans-serif;
     text-shadow:2px 2px 5px #373867;
 }
-.main .presentation h2{
+
+.main .presentation h2 {
     padding-top: 25px;
     padding-bottom: 25px;
     font-size: 30px;
@@ -95,24 +109,28 @@
     font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 
     'Helvetica Neue', sans-serif;
 }
-.main p{
+
+.main p {
     font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 
     'Helvetica Neue', sans-serif;
     font-size: 25px;
     text-align:justify;
 }
-.main .presentation p{
+
+.main .presentation p {
     float: left;
     margin-top: 50px;
     padding-right: 15px;
 }
-.main .presentation .img-presentation{
+
+.main .presentation .img-presentation {
     float: right;
     padding-left: 20px;
     padding-right: 10px;
     padding-bottom: 30px;
 }
-.main .presentation a{
+
+.main .presentation a {
     margin: 500px;
     font-size: 15px;
     font-weight: 1000;
@@ -124,10 +142,12 @@
     border-radius: 5px;
     text-decoration: none;
 }
-.main .presentation a:hover{
+
+.main .presentation a:hover {
     color: #AFAFC2;
 }
-.main .history h2{
+
+.main .history h2 {
     margin-top: 35px;
     margin-bottom: 40px;
     padding-top: 25px;
@@ -139,12 +159,14 @@
     'Helvetica Neue', sans-serif;
     text-shadow:2px 2px 5px #373867;
 }
+
 .main .history {
     float: right;
     margin-top: 56px;
     padding-right: 15px;
     margin-bottom: 30px;
 }
+
 .main .history .img1-history {
    float: left;
    padding-right: 20px;
@@ -157,6 +179,7 @@
     padding-right: 10px;
     margin-bottom: 30px;
 }
+
 .main .functions h2 {
     margin-bottom: 40px;
     padding-top: 25px;
@@ -168,10 +191,12 @@
     'Helvetica Neue', sans-serif;
     text-shadow:2px 2px 5px #373867;
 }
+
 .main .functions .functions-block {
     display: inline-block;
     width: 45%;
 }
+
 .main .functions .functions-block h3 {
     float: right;
     width: 65%;
@@ -183,6 +208,7 @@
     font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 
     'Helvetica Neue', sans-serif;
 }
+
 .main .functions .functions-block img {
     float: left;
     padding-bottom: 95px;
@@ -191,6 +217,7 @@
     max-width: 210px;
     width: 10%;
 }
+
 .main .functions .functions-block p {
     position: relative;
     padding-bottom: 80px;
@@ -198,6 +225,7 @@
     line-height: 27px;
     width: 65%;
 }
+
 .main .reazons h2 {
     margin-bottom: 40px;
     padding-top: 25px;
@@ -209,10 +237,12 @@
     'Helvetica Neue', sans-serif;
     text-shadow:2px 2px 5px #373867;
 }
+
 .main .reazons .reazons-block {
     display: inline-block;
     width: 45%;
 }
+
 .main .reazons .reazons-block h3 {
     float: right;
     width: 65%;
@@ -224,6 +254,7 @@
     font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 
     'Helvetica Neue', sans-serif;
 }
+
 .main .reazons .reazons-block img {
     float: left;
     padding-bottom: 95px;
@@ -232,6 +263,7 @@
     max-width: 210px;
     width: 10%;
 }
+
 .main .reazons .reazons-block p {
     position: relative;
     padding-bottom: 80px;
@@ -239,28 +271,69 @@
     line-height: 27px;
     width: 65%;
 }
+
+.general-list {
+    margin-top: 150px;
+    margin-bottom: 150px;
+    font-size:18px;
+    color: #373867;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 
+    'Helvetica Neue', sans-serif;
+    text-align: center;
+}
+
+.general-list a {
+    text-decoration: none;
+    color: #373867;
+}
+
+.general-list a:hover {
+    color: #AFAFC2;
+}
+
+.general-list h4 {
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+.general-list li {
+    list-style: auto;
+    margin-bottom: 12px;
+    text-align: start;
+}
+
+.list {
+    display: inline-block;
+    margin: 0 10%;
+}
+
 .footer {
     margin-left:16%;
     padding-bottom: 40px;
     text-align: center;
     font-size: 20px;
 }
-.footer a{
+
+.footer a {
     text-decoration: none;
     color: #373867;
 }
-.footer a:hover{
+
+.footer a:hover {
     color: #AFAFC2;
 }
+
 .footer .pagination a {
     padding: 8px 16px;
     transition: background-color .3s;
 }
+
 .footer .pagination a.active {
     background-color: dodgerblue;
     color: white;
 }
-.footer .pagination .prev{
+
+.footer .pagination .prev {
     font-size: 15px;
     font-weight: 1000;
     color: #373867;
@@ -270,7 +343,8 @@
     border: 2px solid #373867;
     border-radius: 5px;
 }
-.footer .pagination .next{
+
+.footer .pagination .next {
     font-size: 15px;
     font-weight: 1000;
     color: #373867;
@@ -280,9 +354,11 @@
     border: 2px solid #373867;
     border-radius: 5px;
 }
+
 .footer .pagination a:hover:not(.active){
     background-color: #ddd;
 }
+
 .footer .linea {
     text-align: center;
     border-bottom: 2px black solid;
@@ -291,7 +367,8 @@
     padding-top: 40px;
     margin-bottom: 20px;
 }
-.social-footer{
+
+.social-footer {
     font-size: 30px;
     padding-bottom: 20px;
 }

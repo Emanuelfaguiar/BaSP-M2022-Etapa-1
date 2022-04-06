@@ -298,18 +298,17 @@
     border: 1px solid black;
     box-shadow: 2px 2px 3px lightgrey;
     border-radius: 5px;
-    margin-bottom: 90px;
+    margin-bottom: 20px;
 }
 
 .form textarea {
-    width: 90%;
+    width: 89%;
     height: 400px;
     padding: 6px 15px;
-    box-sizing: border-box;
     border: 1px solid black;
     border-radius: 4px;
     box-shadow: 2px 2px 3px lightgrey;
-    margin-bottom: 90px;
+    margin-bottom: 30px;
 }
 .message {
     padding-left: 10px;
@@ -331,16 +330,25 @@
     float: right;
 }
 
-.form input[type="text"], input[type="email"] {
-    width: 20%;
-    margin: 0 6%;
+.form input[type="text"] {
+    width: 40%;
+    margin-top: 40px;
+    margin-right: 78px;
+}
+input[type="email"]{
+    width: 40%;
+    margin-top: 40px;
+    margin-right: 100px;
+
+    float: right;
 }
 
 .form .checkbox-email {
-    text-align: center;
-    font-size: 13px;
-    margin-left: 25%;
-    margin-top: 15px;
+    font-size: 18px;
+    float: right;
+    text-align: end;
+    padding-right: 100px;
+    width: 85%;
 }
 
 .form .checkbox-human {
@@ -354,10 +362,9 @@
     box-shadow: none;
 }
 
-
 .form select {
-    width: 89%;
-    margin: 20px 30px 20px 30px;
+    width: 90%;
+    margin: 20px 30px 20px 35px;
     padding: 10px;
     border-radius: 5px;
     border: 1px solid black;

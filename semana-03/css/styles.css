@@ -293,7 +293,6 @@
 }
 
 .form input {
-    width: 30%;
     padding: 8px;
     font-size: 15px;
     border: 1px solid black;
@@ -309,22 +308,27 @@
     box-sizing: border-box;
     border: 1px solid black;
     border-radius: 4px;
-    resize: none;
     box-shadow: 2px 2px 3px lightgrey;
     margin-bottom: 90px;
 }
-
+.message {
+    padding-left: 10px;
+}
+.button {
+    margin-right: 110px;
+}
 .form input[type=submit] {
     background-color: #F56A6A;
     border: 1px solid black;
     color: white;
-    padding: 12px 30px;
-    margin-left: 20px;
+    padding: 12px;
     text-decoration: none;
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 5px;
     box-shadow: 2px 2px 3px lightgrey;
+    width: 8%;
+    float: right;
 }
 
 .form input[type="text"], input[type="email"] {
@@ -340,17 +344,19 @@
 }
 
 .form .checkbox-human {
-    font-size: 13px;
+    font-size: 18px;
     text-align: end;
-    margin-right: 12%;
+    padding-inline-end: 20px;
+    width: 85%;
 }
 
 .form input[type="checkbox"] {
     box-shadow: none;
 }
 
+
 .form select {
-    width: 90%;
+    width: 89%;
     margin: 20px 30px 20px 30px;
     padding: 10px;
     border-radius: 5px;

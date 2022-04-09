@@ -1,0 +1,22 @@
+.header {
+    border-bottom: 3px #373867 solid;
+    font-size: 35px;
+    margin-right: 1%;
+    margin-left: 18%;
+    padding-left: 72.5%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: end;
+    float: right;
+    position: relative;
+    width: 10%;
+}
+
+.header a{
+    text-decoration: none;
+    color: #373867;
+}
+
+.header a:hover {
+    color: #AFAFC2;
+}

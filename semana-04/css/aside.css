@@ -1,0 +1,50 @@
+aside {
+    width: 15%;
+    height: 100%;
+    position: fixed;
+    background-color: #AFAFC2;
+    z-index: 3;
+}
+
+
+.menu-icon-sidebar {
+    display: flex;
+    flex-basis: 100%;
+    font-size: 40px;
+    justify-content: flex-end;
+    margin: 20px
+}
+
+aside ul li {
+    color: #373867;
+    font-size: 15px;
+    padding-top: 15px;
+    padding-left: 70px;
+}
+
+aside p {
+    margin-left: 50px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.trackgenix-sidebar {
+    font-size: 22px;
+}
+
+.text-sidebar {
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 42px;
+    font-size: 15px;
+    font-weight: 100;
+    line-height: 20px;
+    width: 50%;
+}
+
+.sidebar-line {
+    border-bottom: 2px solid #000;
+    margin: 34px auto;
+    width: 70%;
+}

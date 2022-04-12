@@ -4,8 +4,12 @@ aside {
     position: fixed;
     background-color: #AFAFC2;
     z-index: 3;
+    overflow: scroll;
 }
 
+aside::-webkit-scrollbar{
+    display:none;
+}
 
 .menu-icon-sidebar {
     display: flex;

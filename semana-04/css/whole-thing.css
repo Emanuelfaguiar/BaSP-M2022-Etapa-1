@@ -27,12 +27,37 @@ body {
     .socials a i {
         margin: 0px !important;
     }
-    
+
+    main {
+        margin: 0 10% 0 10%;
+    }
+
+    .general-list {
+        flex-direction: column;
+        flex-basis: 300px;
+    }
+
+    .presentation img {
+        width: 100%;
+        margin: 170px 0 30px 0;
+    }
 }
 
 @media screen and (min-width: 768px) {
     aside, .web-history, .history-container h2 {
         display:none;
+    }
+
+    main {
+        margin: 0 10% 0 10%;
+    }
+
+    .general-list {
+        flex-direction: column;
+    }
+    .presentation img {
+        width: 100%;
+        margin-top: 170px;
     }
 }
 
@@ -51,5 +76,37 @@ body {
 
     aside, .web-history, .history-container h2 {
         display:inherit;
+    }
+
+    main {
+        margin: 0 8% 0 25%;
+    }
+
+    footer {
+        margin-left: 20%;
+    }
+
+    .general-list {
+        flex-direction: row;
+    }
+
+    .presentation{
+        display:flex;
+        flex-direction: row;
+        padding: 5px;
+        align-items: start;
+        
+    }
+    
+    .text-container h3 p{
+        order:1;
+    }
+    .presentation img{
+        order:2;
+        width: 80%;
+        max-width: 400px;
+        max-height: 800px;
+        padding-left: 15px;
+        margin: 10% 0 30px 0;
     }
 }

@@ -1,22 +1,60 @@
-.header {
-    border-bottom: 3px #373867 solid;
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    height: 110px;
+    background-color: #ededed;
+    align-items: center;
+}
+
+.logo-company {
+    text-align: center;
+    flex-grow:6;
+}
+
+.logo-company h1 {
+    font-size: 42px;
+    font-weight: bold;
+}
+
+.logo-company h2 {
+    font-size: 21px;
+}
+
+.logo-line {
+    border-bottom: 2px black solid;
+    margin: 7px auto;
+    width: 200px;
+}
+
+.logo-google {
+    width: 100px;
+    height: 120px;
+    margin-left: 15%;
+}
+
+.logo-google img {
+    width: 100px;
+    padding-top: 10px;
+}
+
+.menu-icon {
+    flex-grow: 1;
+    text-align: center;
     font-size: 35px;
+}
+
+.socials {
     margin-right: 1%;
-    margin-left: 18%;
-    padding-left: 72.5%;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    text-align: end;
-    float: right;
-    position: relative;
-    width: 10%;
 }
 
-.header a{
+.socials a i {
+    font-size: 22px;
+    margin: 0 9px;
     text-decoration: none;
-    color: #373867;
 }
 
-.header a:hover {
+.socials a:hover, .menu-icon a:hover {
     color: #AFAFC2;
 }

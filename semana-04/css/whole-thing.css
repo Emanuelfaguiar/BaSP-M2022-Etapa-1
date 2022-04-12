@@ -20,6 +20,7 @@ body {
 
 
 @media screen and (max-width: 768px) {
+
     .logo-google, aside, .web-history, .history-container h2 {
         display: none;
     }
@@ -44,6 +45,7 @@ body {
 }
 
 @media screen and (min-width: 768px) {
+    
     aside, .web-history, .history-container h2 {
         display:none;
     }
@@ -55,6 +57,7 @@ body {
     .general-list {
         flex-direction: column;
     }
+
     .presentation img {
         width: 100%;
         margin-top: 170px;
@@ -62,6 +65,7 @@ body {
 }
 
 @media screen and (min-width: 1024px) {
+
     header {
         justify-content: flex-end;
         border-bottom: 2px black solid;
@@ -101,6 +105,7 @@ body {
     .text-container h3 p{
         order:1;
     }
+
     .presentation img{
         order:2;
         width: 80%;

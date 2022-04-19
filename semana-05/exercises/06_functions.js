@@ -69,12 +69,16 @@ function sumValidation(number1, number2){
         alert("Parameter's ERROR");
         return NaN;
     }
-    else if (number1 == Math.floor(number1) && number2 && Math.floor(number2)){
-        return number1 + number2;
+    else if (integerValidation(number1) == false) {
+        alert('Error: 1st number is not integer');
+        return ('Number converted to integer: ' + Math.round(number1));
+    }
+    else if (integerValidation(number2) == false) {
+        lert('Error: 2nd number is not integer');
+        return ('Number converted to integer: ' + Math.round(number2));
     }
     else{
-        alert('ERROR: float number');
-        return [Math.round(number1), Math.round(number2)];
+        return number1 + number2;
     }
 }
 
@@ -100,3 +104,52 @@ console.log(sumValidation(2.9853, 9.1756));
 /* E) Convertir la validación del ejercicio 6d) en una función separada y llamarla dentro de la función suma probando
 que todo siga funcionando igual.*/
 console.log('Exercise E');
+
+
+function validateIntergerSeparated(number1, number2) {
+    if (validateInteger(num1) == false || validateInteger(num2) == false) {
+        alert('Not integer');
+        return console.log(`Numbers converted to integer: ${Math.round(num1)}, ${Math.round(num2)}`);
+    }
+    else {
+        return num1 + num2;
+    }
+}
+
+function validateNumber (number1, number2) {
+    if (isNaN(num1) == true || isNaN(num2) == true) {
+        alert('Error: invalid parameters');
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+function suma2(number1, number2) {
+    if (validateNumber(num1, num2)) {
+        return NaN;
+    }
+    else {
+        validateIntergerSeparated(num1, num2)
+        return `Result: ${Math.round(num1) + Math.round(num2)}`;
+    }
+}
+
+// Valid
+console.log(sumValidation(8, 6));
+
+// Invalid
+console.log(sumValidation(5, 'g'));
+
+// Invalid
+console.log(sumValidation('*', 's'));
+
+// Invalid
+console.log(sumValidation('+', 4.9));
+
+// Invalid
+console.log(sumValidation(10.8, 7));
+
+// Invalid
+console.log(sumValidation(2.9853, 9.1756));

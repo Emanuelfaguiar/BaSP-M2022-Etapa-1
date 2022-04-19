@@ -69,11 +69,11 @@ function sumValidation(number1, number2){
         alert("Parameter's ERROR");
         return NaN;
     }
-    else if (integerValidation(number1) == false) {
+    else if (validateInteger(number1) == false) {
         alert('Error: 1st number is not integer');
         return ('Number converted to integer: ' + Math.round(number1));
     }
-    else if (integerValidation(number2) == false) {
+    else if (validateInteger(number2) == false) {
         lert('Error: 2nd number is not integer');
         return ('Number converted to integer: ' + Math.round(number2));
     }
@@ -107,17 +107,17 @@ console.log('Exercise E');
 
 
 function validateIntergerSeparated(number1, number2) {
-    if (validateInteger(num1) == false || validateInteger(num2) == false) {
+    if (validateInteger(number1) == false || validateInteger(number2) == false) {
         alert('Not integer');
-        return console.log(`Numbers converted to integer: ${Math.round(num1)}, ${Math.round(num2)}`);
+        return console.log('Numbers converted to integer: ' + Math.round(number1) + ', ' + Math.round(number2));
     }
     else {
-        return num1 + num2;
+        return number1 + number2;
     }
 }
 
 function validateNumber (number1, number2) {
-    if (isNaN(num1) == true || isNaN(num2) == true) {
+    if (isNaN(number1) == true || isNaN(number2) == true) {
         alert('Error: invalid parameters');
         return true;
     }
@@ -127,29 +127,29 @@ function validateNumber (number1, number2) {
 }
 
 function suma2(number1, number2) {
-    if (validateNumber(num1, num2)) {
+    if (validateNumber(number1, number2)) {
         return NaN;
     }
     else {
-        validateIntergerSeparated(num1, num2)
-        return `Result: ${Math.round(num1) + Math.round(num2)}`;
+        validateIntergerSeparated(number1, number2);
+        return ('Result: ' + (Math.round(number1) + Math.round(number2)));
     }
 }
 
 // Valid
-console.log(sumValidation(8, 6));
+console.log(suma2(8, 6));
 
 // Invalid
-console.log(sumValidation(5, 'g'));
+console.log(suma2(5, 'g'));
 
 // Invalid
-console.log(sumValidation('*', 's'));
+console.log(suma2('*', 's'));
 
 // Invalid
-console.log(sumValidation('+', 4.9));
+console.log(suma2('+', 4.9));
 
 // Invalid
-console.log(sumValidation(10.8, 7));
+console.log(suma2(10.8, 7));
 
 // Invalid
-console.log(sumValidation(2.9853, 9.1756));
+console.log(suma2(2.9853, 9.1756));

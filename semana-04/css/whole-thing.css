@@ -9,109 +9,13 @@ a:link, a:visited {
 .socials a:hover, .menu-icon a:hover, .social-footer a:hover, aside a:hover {
     color: #c6c6d8;
 }
+
 ol {
     list-style: auto;
 }
+
 body {
     color: #373867;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 
     'Helvetica Neue', sans-serif;
-}
-
-
-@media screen and (max-width: 768px) {
-
-    .logo-google, aside, .web-history, .history-container h2 {
-        display: none;
-    }
-
-    .socials a i {
-        margin: 0px !important;
-    }
-
-    main {
-        margin: 0 10% 0 10%;
-    }
-
-    .general-list {
-        flex-direction: column;
-        flex-basis: 300px;
-    }
-
-    .presentation img {
-        width: 100%;
-        margin: 170px 0 30px 0;
-    }
-}
-
-@media screen and (min-width: 768px) {
-    
-    aside, .web-history, .history-container h2 {
-        display:none;
-    }
-
-    main {
-        margin: 0 10% 0 10%;
-    }
-
-    .general-list {
-        flex-direction: column;
-    }
-
-    .presentation img {
-        width: 100%;
-        margin-top: 170px;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-
-    header {
-        justify-content: flex-end;
-        border-bottom: 2px black solid;
-        max-height: 50px;
-        background-color: white !important;
-    }
-
-    .logo-google, .logo-company, .menu-icon, .history-container h3, .mob-hist-p, .img1-mob-history, .img2-mob-history, 
-    .history-mobile-p, .history-more{
-        display: none;
-    }
-
-    aside, .web-history, .history-container h2 {
-        display:inherit;
-    }
-
-    main {
-        margin: 0 8% 0 25%;
-    }
-
-    footer {
-        margin-left: 20%;
-    }
-
-    .general-list {
-        flex-direction: row;
-    }
-
-    .presentation{
-        display:flex;
-        flex-direction: row;
-        padding: 5px;
-        align-items: start;
-        
-    }
-    
-    .text-container h3 p{
-        order:1;
-    }
-
-    .presentation img{
-        order:2;
-        width: 80%;
-        max-width: 400px;
-        max-height: 800px;
-        padding-left: 15px;
-        margin: 10% 0 30px 0;
-    }
 }

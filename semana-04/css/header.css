@@ -8,6 +8,10 @@ header {
     align-items: center;
 }
 
+.logo-google, .socials a i{
+    display:none;
+}
+
 .logo-company {
     text-align: center;
     flex-grow:6;
@@ -28,27 +32,38 @@ header {
     width: 200px;
 }
 
-.logo-google {
-    width: 100px;
-    height: 120px;
-    margin-left: 15%;
-}
-
-.logo-google img {
-    width: 100px;
-    padding: auto;
-}
-
 .menu-icon {
     flex-grow: 1;
     text-align: center;
     font-size: 35px;
 }
 
-.socials {
-    margin-right: 1%;
+@media screen and (min-width: 768px){
+    .socials {
+        margin-right: 1%;
+    }
+    
+    .socials a i {
+        display: inherit;
+        font-size: 30px;
+    }
+
+    .logo-google {
+        display: inherit;
+        width: 100px;
+        height: 120px;
+        margin-left: 18%;
+    }
 }
 
-.socials a i {
-    font-size: 22px;
-}
+@media screen and (min-width: 1024px) {
+    header {
+        justify-content: flex-end;
+        border-bottom: 2px black solid;
+        max-height: 50px;
+        background-color: white;
+    }
+
+    .logo-google, .logo-company, .menu-icon{
+        display: none;
+    }

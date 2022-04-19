@@ -57,3 +57,9 @@ footer p {
     width: 70%;
     margin: 40px 15% 50px 15%;
 }
+
+@media screen and (min-width: 768px){
+    footer {
+        margin-left: 20%;
+    }
+}

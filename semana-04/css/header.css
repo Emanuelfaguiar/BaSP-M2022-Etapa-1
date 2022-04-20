@@ -39,15 +39,6 @@ header {
 }
 
 @media screen and (min-width: 768px){
-    .socials {
-        margin-right: 1%;
-    }
-    
-    .socials a i {
-        display: inherit;
-        font-size: 30px;
-    }
-
     .logo-google {
         display: inherit;
         width: 100px;
@@ -62,6 +53,15 @@ header {
         border-bottom: 2px black solid;
         max-height: 50px;
         background-color: white;
+    }
+
+    .socials {
+        margin-right: 1%;
+    }
+    
+    .socials a i {
+        display: inherit;
+        font-size: 30px;
     }
 
     .logo-google, .logo-company, .menu-icon{

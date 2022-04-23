@@ -1,0 +1,87 @@
+aside {
+    display:none;
+}
+
+@media screen and (min-width: 768px) {
+    aside {
+        display:inherit;
+        width: 23%;
+        height: 100%;
+        position: fixed;
+        background-color: #AFAFC2;
+        z-index: 3;
+        overflow: scroll;
+    }
+
+    aside::-webkit-scrollbar{
+        display:none;
+    }
+
+    .menu-icon-sidebar {
+        display: flex;
+        flex-basis: 100%;
+        font-size: 35px;
+        justify-content: flex-end;
+        margin: 20px
+    }
+
+    aside p {
+        margin-left: 50px;
+        margin-bottom: 20px;
+        font-size: 15px; /*cambiar para la compu*/
+        font-weight: bold;
+    }
+
+    aside ul li {
+        color: #373867;
+        font-size: 12px; /*cambiar para la compu*/
+        padding-top: 15px;
+        padding-left: 70px;
+    }
+
+    .trackgenix-sidebar { /* cambiar letra para compu*/
+        font-size: 18px; /*cambiar para la compu*/
+    }
+
+    .text-sidebar {
+        margin: auto;
+        margin-top: 25px;
+        margin-bottom: 42px;
+        font-size: 13px; /*cambiar para la compu*/
+        font-weight: 400;
+        line-height: 20px;
+        width: 50%;
+    }
+
+    .sidebar-line {
+        border-bottom: 2px solid #000;
+        margin: 34px auto;
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    aside {
+        width: 18%;
+    }
+
+    .menu-icon-sidebar {
+        font-size: 40px;
+    }
+
+    aside p {
+        font-size: 18px;
+    }
+
+    aside ul li {
+        font-size: 15px; 
+    }
+
+    .trackgenix-sidebar {
+        font-size: 20px;
+    }
+
+    .text-sidebar {
+        font-size: 15px;
+    }
+}

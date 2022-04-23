@@ -319,6 +319,11 @@ input[type="submit"] {
     .web-history, .history-container h2 {
         display:inherit;
     }
+
+    .functions-container, .reazons-container {
+        max-width: 1000px;
+        margin-left: 10%;
+    }
     
     .functions-container h2, .reazons-container h2 {
         text-align: left;

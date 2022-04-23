@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../styles/whole-thing.css">
     <link rel="stylesheet" href="../styles/header.css">
     <link rel="stylesheet" href="../styles/aside.css">
-    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/login.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
@@ -65,14 +65,16 @@
     </aside>
     <main>
         <div class='form-container'>
-            <h1>Sign In</h1>
+            <h2>Sign In</h2>
             <div class='login-form-container'>
             <form method='get'>
-                <input type='email' name='email' placeholder='Email'>
-                <input type='password' pattern='{6,}' placeholder='Password'>
+                <div class="input-form">
+                    <input type='email' name='email' placeholder='Email'>
+                    <input type='password' pattern='{6,}' placeholder='Password'>
+                </div>
                 <div class='chekbox-container'>
-                <input type='checkbox' name='checkbox-remember'>
-                <label for='checkbox-remember'>Remember me</label>
+                    <input type='checkbox' name='checkbox-remember'>
+                    <label for='checkbox-remember'>Remember me</label>
                 </div>
             </form>
             <a href='#' target='blanck'>Forgot password?</a>

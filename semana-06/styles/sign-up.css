@@ -9,7 +9,7 @@ main {
 
 .form-container{
     width: 80%;
-    flex-basis: 770px;
+    flex-basis: 1000px;
     text-align: center;
     align-items: center;
     max-width: 700px;
@@ -23,14 +23,14 @@ main {
 .form-container h2 {
     font-size: 35px;
     font-weight: 550;
-    padding-top: 20px;
+    padding-top: 30px;
     padding-bottom: 20px;
 }
 
 input{
     width: 80%;
     margin-top: 8px;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     font-size: 13px;
     font-weight: 540;
     padding: 8px 10px;
@@ -40,6 +40,13 @@ input{
     box-shadow: 3px 3px 5px lightgrey;
 }
 
+.msg-error {
+    font-size: 13px;
+    color: red;
+    padding-left: 9%;
+    float:left;
+}
+
 label {
     display: flex;
     text-align: start;
@@ -47,16 +54,24 @@ label {
     font-weight: 500;
 }
 
-button {
-    margin-top: 10px;
+input[type=submit]{
+    width: 23%;
+    margin-top: 30px;
     font-size: 15px;
     font-weight: 550;
-    padding: 8px 12px;
     color: #373867;
     background-color: #AACE9B;
     border-style: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.signup-validation-container{
+    margin-top: 20px;
+    background-color:lightgray;
+    padding: 5px 5px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px lightgrey;
 }
 
 @media screen and (min-width: 768px) {
@@ -72,7 +87,7 @@ button {
    }
 
    .form-container{
-        flex-basis: 550px;
+        flex-basis: 750px;
    }
 
    .input-form {

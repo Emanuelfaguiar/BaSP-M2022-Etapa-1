@@ -70,7 +70,9 @@
                 <form method='get'>
                     <div class="input-form">
                         <input type='email' name='email' placeholder='Email'>
+                        <p class="msg-error"></p>
                         <input type='password' placeholder='Password'>
+                        <p class="msg-error"></p>
                     </div>
                     <div class='chekbox-container'>
                         <input type='checkbox' name='checkbox-remember'>
@@ -78,9 +80,17 @@
                     </div>
                 </form>
                 <a href='#' target='blanck'>Forgot password?</a>
-                <button>Continue</button>
+                <input type="submit" name="login-button" value="Continue">
+            </div>
+        </div>
+        <div class="login-validation-container">
+            <div id="login-validation">
+                <h3>Validation Result</h3>
+                <p class="login-validation-result"></p>
+                <p class="login-validation-result"></p>
             </div>
         </div>
     </main>
+    <script src="../javascript/login.js"></script>
 </body>
 </html>

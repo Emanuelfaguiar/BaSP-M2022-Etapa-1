@@ -73,40 +73,81 @@
                             <div class="column-1">
                                 <label>Fisrt Name</label>
                                 <input type="text" name="name">
+                                <p class="msg-error"></p>
                             </div>
                             <div class="column-2">
                                 <label>Last Name</label>
                                 <input type="text" name="lastname">
+                                <p class="msg-error"></p>
                             </div>
                             <div class="column-1">
-                                <label>Business TIN</label>
-                                <input type="number" name="busness">
+                                <label>DNI</label>
+                                <input type="number" name="dni">
+                                <p class="msg-error"></p>
                             </div>
                             <div class="column-2">
-                                <label>Fiscal Address</label>
-                                <input type="text" name="address">
+                                <label>Date of Birth</label>
+                                <input type="date" name="date">
+                                <p class="msg-error"></p>
                             </div>
                             <div class="column-1">
                                 <label>Email</label>
                                 <input type='email' name='email'>
+                                <p class="msg-error"></p>
                             </div>
                             <div class="column-2">
-                                <label>Phone</label>
+                                <label>Phone number</label>
                                 <input type="tel" name="phone">
+                                <p class="msg-error"></p>
+                            </div>
+                            <div class="column-1">
+                                <label>City</label>
+                                <input type="text" name="city">
+                                <p class="msg-error"></p>
+                            </div>
+                            <div class="column-2">
+                                <label>Address</label>
+                                <input type="text" name="address">
+                                <p class="msg-error"></p>
+                            </div>
+                            <div class="column-2">
+                                <label>Postal Code</label>
+                                <input type="number" name="postal-code">
+                                <p class="msg-error"></p>
                             </div>
                             <div class="column-1">
                                 <label>Password</label>
-                                <input type='password'>
+                                <input type='password' name="password">
+                                <p class="msg-error"></p>
                             </div>
                             <div class="column-2">
                                 <label>Repeat Password</label>
-                                <input type='password'>
+                                <input type='password' name="repeat-password">
+                                <p class="msg-error"></p>
                             </div>
                         </div>
                     </form>
-                    <button>Continue</button>
+                    <input type="submit" name="signup-button" value="Continue">
                 </div>
+            </div>
+        </div>
+        <div class="signup-validation-container">
+            <div id="signup-validation">
+                <h3>Sign up result</h3>
+                <p class="signup-validation-result"></p>
+                <p class="signup-validation-result"></p>
+                <p class="signup-validation-result"></p>
+                <p class="signup-validation-result"></p>
+                <p class="signup-validation-result"></p>
+                <p class="signup-validation-result"></p>
+                <p class="signup-validation-result"></p>
+                <p class="signup-validation-result"></p>
+                <p class="signup-validation-result"></p>
+                <p class="signup-validation-result"></p>
+                <p class="signup-validation-result"></p>
+            </div>
         </div>
     </main>
+    <script src="../javascript/sign-up.js"></script>
 </body>
 </html>

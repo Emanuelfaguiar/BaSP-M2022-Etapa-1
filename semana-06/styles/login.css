@@ -8,7 +8,7 @@ main {
 }
 
 .form-container{
-    flex-basis: 450px;
+    flex-basis: 400px;
     text-align: center;
     align-items: center;
     max-width: 320px;
@@ -16,18 +16,17 @@ main {
     min-height: 350px;
     background-color: #EBEBF0;
     box-shadow: 3px 3px 5px lightgrey;
+    border-radius: 10px;
 }
 
 .form-container h2 {
     font-size: 35px;
     padding-top: 20px;
-    padding-bottom: 20px;
 }
 
-input{
+form input[type='email'], form input[type='password']{
     width: 80%;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 40px;
     font-size: 13px;
     font-weight: 540;
     padding: 8px 10px;
@@ -35,10 +34,22 @@ input{
     border-radius: 4px;
 }
 
+form input[type='email']:focus, form input[type='password']:focus{
+    outline: 0;
+}
+
+.msg-error {
+    font-size: 13px;
+    color: red;
+    float:left;
+    padding-left: 3%;
+}
+
 .chekbox-container {
     display: flex;
     align-items: center;
     white-space: pre;
+    margin-top: 30px;
     padding-right: 170px;
     padding-left: 18px;
 }
@@ -46,7 +57,7 @@ input{
 main a {
     display: flex;
     justify-content: end;
-    padding: 3px 25px 3px 0px;
+    padding: 15px 25px 3px 0px;
 }
 
 a {
@@ -61,9 +72,9 @@ a:hover {
     color: #c6c6d8;
 }
 
-button {
+input[type=submit]{
     width: 80%;
-    margin-top: 50px;
+    margin-top: 30px;
     font-size: 18px;
     padding: 8px 0px;
     color: white;
@@ -71,6 +82,19 @@ button {
     border-radius: 5px;
     border: 1px solid black;
     cursor: pointer;
+}
+
+.login-validation-container{
+    margin-top: 20px;
+    background-color:lightgray;
+    padding: 5px 5px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px lightgrey;
+}
+
+
+input[type=submit]:hover{
+    background-color: salmon;
 }
 
 @media screen and (min-width: 768px) {

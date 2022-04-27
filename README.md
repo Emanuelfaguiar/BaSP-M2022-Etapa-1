@@ -10,13 +10,17 @@ Styled index.html with a ccs flexbox code, making a landign desing for a desktop
 GitHub direct page: https://emanuelfaguiar.github.io/BaSP-M2022-Etapa-1/semana-04/index.html
 
 # WEEK 05 - JAVASCRIPT
-The folder exercises have 6 exercise's blocks, who are linked to a html file (index.html) through the script tag, making all the results visible on the broser's console.
+The folder have 6 exercise's blocks, who are linked to a html file (index.html) through the script tag, making all the results visible on the broser's console.
 
 Each one of the exercises corresponds to one module of JS with differents tools to reseolve the problematics.
 
 GitHub direct page: https://emanuelfaguiar.github.io/BaSP-M2022-Etapa-1/semana-05/index.html
 
+# WEEK 06 - LOGIN AND SIGN UP
+These folder have 4 carpets. Witch one with files of differents code's type (javascript, css and html).
+All those codes are for a responsive landing, login and register page, separate by name and code's type.
 
+GitHub direct page: https://github.com/Emanuelfaguiar/BaSP-M2022-Etapa-1/tree/master/semana-06
 
 ```
     Author: Emanuel Figueiredo de Aguiar

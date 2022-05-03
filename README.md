@@ -22,6 +22,15 @@ All those codes are for a responsive landing, login and register page, separate 
 
 GitHub direct page: https://github.com/Emanuelfaguiar/BaSP-M2022-Etapa-1/tree/master/semana-06
 
+# WEEK 07 - JavaScript Storage
+
+In this week i included more functions to the login and sign-up files.
+When we click the buttons "continue", the all validated form data is sent to a server, then returns a message of succes, or a message of error (in case of 1 or more inputs are invalid).
+
+In the login page, the message of succes appears ONLY when entering an existing user (in this case: rose@radiumtocket.com / password: BaSP2022).
+
+In the sign up page, the success' message will appear only when all the inputs are correctly filled, if any error were found, the server will send a error message showing what needs to be fixed.
+
 ```
     Author: Emanuel Figueiredo de Aguiar
 ```

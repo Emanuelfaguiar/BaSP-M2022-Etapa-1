@@ -1,0 +1,117 @@
+main {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    margin: 0 5% 0 5%;
+    top: 200px; 
+}
+
+.form-container{
+    text-align: center;
+    align-items: center;
+    flex-basis: 1000px;
+    width: 80%;
+    max-width: 700px;
+    min-width: 320px;
+    min-height: 350px;
+    background-color: #EBEBF0;
+    box-shadow: 3px 3px 5px lightgrey;
+    border-radius: 15px;
+}
+
+.form-container h2 {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    font-size: 35px;
+    font-weight: 550;
+}
+
+input{
+    width: 80%;
+    margin-top: 8px;
+    margin-bottom: 5px;
+    padding: 8px 10px;
+    background-color: #EBEBF0;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-shadow: 3px 3px 5px lightgrey;
+    font-size: 13px;
+    font-weight: 540;
+}
+
+.msg-error {
+    float:left;
+    padding-left: 9%;
+    font-size: 13px;
+    color: red;
+}
+
+label {
+    display: flex;
+    text-align: start;
+    padding-left: 8%;
+    font-weight: 500;
+}
+
+input[type=submit]{
+    width: 23%;
+    margin-top: 30px;
+    color: #373867;
+    background-color: #AACE9B;
+    border-style: none;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 550;
+    cursor: pointer;
+}
+
+.signup-validation-container{
+    margin-top: 20px;
+    padding: 5px 5px;
+    background-color:lightgray;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px lightgrey;
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        margin: 0 3% 0px 25%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    main {
+       margin: 0 3% 0px 20%;
+   }
+
+   .form-container{
+        flex-basis: 750px;
+   }
+
+   .input-form {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: space-between;
+        background-color: #AACE9B;
+    
+   }
+
+   .column-1 {
+       float:left;
+       width: 50%;
+       margin: 10px 0px;
+       
+   }
+
+   .column-2 {
+       float: right;
+       width: 50%;
+       margin: 10px 0px;
+   }
+
+   input{
+    width: 80%;
+   }
+}

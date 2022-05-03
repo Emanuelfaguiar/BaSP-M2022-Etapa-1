@@ -1,0 +1,340 @@
+main {
+    margin: 0 5% 0 5%;
+}
+
+.presentation img {
+    width: 100%;
+    margin: 170px 0 30px 0;
+}
+
+.presentation{
+    text-align: center;
+}
+
+.presentation h2 {
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 0px 4px 4px lightgrey;
+    margin-bottom: 30px;
+}
+
+.text-presentation h3 {
+    font-size: 15px;
+    margin: 13px 0;
+    text-transform: uppercase;
+}
+
+.text-presentation p {
+    font-size: 15px;
+    line-height: 1rem;
+    margin-bottom: 36px;
+    text-align: justify;
+}
+
+.text-presentation button, .history-container button {
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #373867;
+    background-color: #AACE9B;
+    padding: 10px 23px;
+    border-radius: 5px;
+    border-style: none;
+    cursor: pointer;
+}
+
+.web-history, .history-container h2 {
+    display: none;
+}
+
+.history-container, .functions-container, .reazons-container, .form-container, .list-section{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.history-container {
+    width: 100%;
+    text-align: start;
+}
+
+.history-container h2 {
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: 0px 4px 4px lightgrey;
+    margin-bottom: 15px;
+}
+
+.history-container h3 {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 16px 0;
+    color: #000;
+}
+
+.history-container p {
+    width: 95%;
+    font-size: 16px;
+    line-height: 1rem;
+    margin-bottom: 16px;
+    text-align: justify;
+}
+
+.img1-mob-history, .img2-mob-history{
+    width: 80%;
+    max-width: 300px;
+    max-height: 150px;
+    margin-top: 20px;
+}
+
+.img1-history {
+    float: left;
+    margin: 10px;
+    margin-bottom: 10px;
+    width: 75%;
+    max-width: 400px;
+    max-height: 400px;
+}
+
+.img2-history {
+    float: right;
+    margin: 10px;
+    margin-bottom: 0;
+    width: 75%;
+    max-width: 400px;
+    max-height: 300px;
+}
+
+.functions-container section, .reazons-container section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.functions-block, .reazons-block {
+    display: flex;
+    text-align: start;
+    align-items: center;
+    padding-bottom: 55px;
+    flex-basis: 342px;
+}
+
+.functions-container h2, .reazons-container h2 {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 30px 0;
+    text-shadow: 0px 4px 4px lightgrey;
+}
+
+.functions-block img, .reazons-block img {
+    width: 20%;
+    min-width: 30px
+}
+
+.functions-p h3, .reasons-text h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.functions-block p, .reazons-block p {
+    font-size: 14px;
+}
+
+.functions-p, .reasons-text {
+    width: 70%;
+    margin-left: 20px;
+}
+
+.form-container {
+    width: 90%;
+    margin: auto;
+}
+
+.form-container h2 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.form-line {
+    border-bottom: 2px solid #f11a41;
+    margin: auto;
+    margin-bottom: 20px;
+    width: 45%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+input, select, textarea {
+    font-size: 10px;
+    font-weight: bold;
+    padding: 8px 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+    text-shadow: 0px 4px 4px lightgrey;
+}
+
+input[type="text"], input[type="email"], select {
+    margin: 10px 0;
+}
+
+input[type="checkbox"] {
+    box-shadow: none;
+    margin-right: 5px;
+}
+
+.name-email-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.checkbox-email {
+    display: flex;
+    align-items: center;
+    font-size: 10px;
+    align-self: flex-end;
+}
+
+textarea {
+    height: 200px ;
+    margin: 10px 0;
+    resize: none;
+}
+
+.checkbox-human {
+    display: flex;
+    align-items: center;
+    font-size: 10px;
+    margin-bottom: 10px;
+}
+
+input[type="submit"] {
+    width: 35%;
+    text-align: center;
+    background-color: #f56a6a;
+    color: #FFF;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+.general-list {
+    flex-direction: column;
+    flex-basis: 300px;
+    display: flex;
+    text-align: start;
+    align-items: center;
+    justify-content:space-between ;
+}
+
+.list {
+    width:30%;
+}
+
+.list h4 {
+    align-self: start;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #000;
+    padding-bottom: 10px;
+    
+}
+
+.list ol {
+    margin-top: 15px;
+    margin-bottom: 50px;
+}
+
+.list ol li {
+    font-size: 12px;
+    margin-bottom: 25px;
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        margin: 0 3% 0 25%;
+    }
+
+    .presentation img {
+        width: 100%;
+        margin-top: 170px;
+    }
+
+    .general-list {
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    main {
+       margin: 0 3% 0 20%;
+   }
+
+   .presentation{
+       display:flex;
+       flex-direction: row;
+       padding: 5px;
+       align-items: start;   
+   }
+
+   .text-container h3 p{
+    order:1;
+    }
+
+   .presentation h2, .presentation h3 {
+       text-align: left;
+   }
+
+   .presentation h2 {
+        margin-top: 100px;
+        font-size: 40px;
+    }
+
+    .presentation h3 {
+        font-size: 20px;
+    }
+
+   .presentation img{
+       order:2;
+       width: 80%;
+       max-width: 450px;
+       padding-left: 15px;
+       margin: 9% 0 30px 0;
+   }
+
+   .history-container h3, .mob-hist-p, .img1-mob-history, .img2-mob-history, .history-mobile-p, .history-more{
+        display: none;
+    }
+
+    .web-history, .history-container h2 {
+        display:inherit;
+    }
+
+    .functions-container, .reazons-container {
+        max-width: 1000px;
+        margin-left: 10%;
+    }
+    
+    .functions-container h2, .reazons-container h2 {
+        text-align: left;
+    }
+    
+    .functions-block img, .reazons-block img {
+        width: 45%;
+    }
+
+    .general-list {
+       flex-direction: row;
+       margin-left: 5%;
+   }
+}

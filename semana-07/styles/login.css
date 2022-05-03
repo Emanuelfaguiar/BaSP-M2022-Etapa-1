@@ -1,0 +1,111 @@
+main {
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+    margin: 0 5% 0 5%;
+    top: 200px;
+}
+
+.form-container{
+    flex-basis: 400px;
+    text-align: center;
+    align-items: center;
+    max-width: 320px;
+    min-width: 220px;
+    min-height: 350px;
+    background-color: #EBEBF0;
+    box-shadow: 3px 3px 5px lightgrey;
+    border-radius: 10px;
+}
+
+.form-container h2 {
+    padding-top: 20px;
+    font-size: 35px;
+}
+
+form input[type='email'], form input[type='password']{
+    width: 80%;
+    margin-top: 40px;
+    padding: 8px 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 540;
+}
+
+form input[type='email']:focus, form input[type='password']:focus{
+    outline: 0;
+}
+
+.msg-error {
+    float:left;
+    padding-left: 3%;
+    font-size: 13px;
+    color: red;
+}
+
+.chekbox-container {
+    display: flex;
+    align-items: center;
+    white-space: pre;
+    margin-top: 30px;
+    padding-right: 170px;
+    padding-left: 18px;
+}
+
+main a {
+    display: flex;
+    justify-content: end;
+    padding: 15px 25px 3px 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link, a:visited {
+    color: #373867;
+}
+
+a:hover {
+    color: #c6c6d8;
+}
+
+input[type=submit]{
+    width: 80%;
+    margin-top: 30px;
+    padding: 8px 0px;
+    color: white;
+    background-color: #F56A6A;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.login-validation-container{
+    margin-top: 20px;
+    padding: 5px 5px;
+    background-color:lightgray;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px lightgrey;
+}
+
+
+input[type=submit]:hover{
+    background-color: salmon;
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        margin: 0 3% 0px 25%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    main {
+       margin: 0 3% 0px 20%;
+   }
+}

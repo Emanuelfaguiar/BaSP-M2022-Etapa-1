@@ -1,17 +1,21 @@
-var nameSignup = document.querySelector('input[name="name"]');
-var lastnameSignup = document.querySelector('input[name="lastname"]');
-var dniSignup = document.querySelector('input[name="dni"]');
-var dateSignup = document.querySelector('input[name="date"]');
-var telSignup = document.querySelector('input[name="phone"]');
-var addressSignup = document.querySelector('input[name="address"]');
-var locationSignup = document.querySelector('input[name="city"]');
-var postalCodeSignup = document.querySelector('input[name="postal-code"]');
-var emailSignup = document.querySelector('input[name="email"]');
-var passwordSignup = document.querySelector('input[name="password"]');
-var repeatPasswordSignup = document.querySelector('input[name="repeat-password"]');
+var nameSignup = document.getElementById('input-name');
+var lastnameSignup = document.getElementById('input-lastname');
+var dniSignup = document.getElementById('input-dni');
+var dateSignup = document.getElementById('input-date');
+var telSignup = document.getElementById('input-phone');
+var addressSignup = document.getElementById('input-address');
+var locationSignup = document.getElementById('input-city');
+var postalCodeSignup = document.getElementById('input-postal-code');
+var emailSignup = document.getElementById('input-email');
+var passwordSignup = document.getElementById('input-password');
+var repeatPasswordSignup = document.getElementById('input-repeat-password');
 var signupErrors = document.getElementsByClassName('msg-error');
-var submitSignup = document.querySelector('input[type="submit"]');
+var submitSignup = document.getElementById('input-submit');
 var validationSignup = document.getElementsByClassName('signup-validation-result');
+var modalBox = document.getElementById('signup-validation');
+var modalContainer = document.getElementById('signup-validation-container');
+var signupResponse = document.getElementById('signup-response');
+var closeModal = document.getElementById('close-modal');
 
 // NAME
 
@@ -353,113 +357,222 @@ function validation1(strings) {
     return false
 }
 
+function convertDate(date) {
+    var year = date.substr(0, 4);
+    var month = date.substr(5, 2);
+    var day = date.substr(8, 2);
+    var dateConv = month + '/' + day + '/' + year;
+    return dateConv
+}
+
+function convertDatetoNormal(date) {
+    var year = date.substr(0, 4);
+    var month = date.substr(5, 2);
+    var day = date.substr(8, 2);
+    var dateConv =  day + '/' + month + '/' + year;
+    return dateConv
+}
+
+function saveLocalStorage(data) {
+    if(localStorage.getItem('id') == null) {
+    localStorage.setItem("id", data.id);
+    localStorage.setItem('name', data.name);
+    localStorage.setItem('lastname', data.lastName);
+    localStorage.setItem('dni', data.dni);
+    localStorage.setItem('birth date', data.dob);
+    localStorage.setItem('phone', data.phone);
+    localStorage.setItem('address', data.address);
+    localStorage.setItem('location', data.city);
+    localStorage.setItem('postalcode', data.zip);
+    localStorage.setItem('email', data.email);
+    localStorage.setItem('password', data.password);
+    }
+}
+
+var nameValidationRes = validationSignup[0];
+var lastnameValidationRes = validationSignup[1];
+var dniValidationRes = validationSignup[2];
+var birthValidationRes = validationSignup[3];
+var emailValidationResSignup = validationSignup[4];
+var telValidationRes = validationSignup[5];
+var locValidationRes = validationSignup[6];
+var addressValidationRes = validationSignup[7];
+var postValidationRes = validationSignup[8];
+var passValidationResSignup = validationSignup[9];
+var passRepeatValidationRes = validationSignup[10];
+
 // signup validation results
 
-validationBoxS = document.getElementById('signup-validation');
-submitSignup.addEventListener('click', showResultsSignup);
+closeModal.addEventListener('click', function(){
+    modalContainer.classList.add('hidden');
+    modalBox.classList.add('hidden');
+})
 
-validationBoxS.style.display = 'none';
+submitSignup.addEventListener('click', showResultsSignup);
 
 function showResultsSignup() {
     event.preventDefault();
-    validationBoxS.style.display = 'inherit';
-    validationBoxS.scrollIntoView(true);
+
+    modalContainer.classList.remove('hidden');
+    modalBox.classList.remove('hidden');
+
     if (validateName()) {
-        validationSignup[0].textContent = 'Invalid name';
-        validationSignup[0].style.color = 'red';
+        nameValidationRes.textContent = 'Invalid name';
+        nameValidationRes.style.color = 'red';
     }
     else {
-        validationSignup[0].textContent = ('Name: ' + nameSignup.value);
-        validationSignup[0].style.color = 'green';
+        nameValidationRes.textContent = ('Name: ' + nameSignup.value);
+        nameValidationRes.style.color = 'green';
     }
 
     if (validateLastname()) {
-        validationSignup[1].textContent = 'Invalid last name';
-        validationSignup[1].style.color = 'red';
+        lastnameValidationRes.textContent = 'Invalid last name';
+        lastnameValidationRes.style.color = 'red';
     }
     else {
-        validationSignup[1].textContent = ('Last name: ' + lastnameSignup.value);
-        validationSignup[1].style.color = 'green';
+        lastnameValidationRes.textContent = ('Last name: ' + lastnameSignup.value);
+        lastnameValidationRes.style.color = 'green';
     }
 
     if (validateDNI()) {
-        validationSignup[2].textContent = 'Invalid DNI';
-        validationSignup[2].style.color = 'red';
+        dniValidationRes.textContent = 'Invalid DNI';
+        dniValidationRes.style.color = 'red';
     }
     else {
-        validationSignup[2].textContent = ('DNI: ' + dniSignup.value);
-        validationSignup[2].style.color = 'green';
+        dniValidationRes.textContent = ('DNI: ' + dniSignup.value);
+        dniValidationRes.style.color = 'green';
     }
 
     if (validateDate()) {
-        validationSignup[3].textContent = 'Invalid birth date';
-        validationSignup[3].style.color = 'red';
+        birthValidationRes.textContent = 'Invalid birth date';
+        birthValidationRes.style.color = 'red';
     }
     else {
-        validationSignup[3].textContent = ('Birth date: ' + dateSignup.value);
-        validationSignup[3].style.color = 'green';
+        birthValidationRes.textContent = ('Birth date: ' + dateSignup.value);
+        birthValidationRes.style.color = 'green';
     }
 
     if (validateTel()) {
-        validationSignup[4].textContent = 'Invalid email';
-        validationSignup[4].style.color = 'red';
+        emailValidationResSignup.textContent = 'Invalid email';
+        emailValidationResSignup.style.color = 'red';
     }
     else { 
-        validationSignup[4].textContent = ('Email: ' + emailSignup.value);
-        validationSignup[4].style.color = 'green';
+        emailValidationResSignup.textContent = ('Email: ' + emailSignup.value);
+        emailValidationResSignup.style.color = 'green';
     }
 
     if (validateAddress()) { //phone number
-        validationSignup[5].textContent = 'Invalid phone number';
-        validationSignup[5].style.color = 'red';
+        telValidationRestextContent = 'Invalid phone number';
+        telValidationResstyle.color = 'red';
     }
     else {
-        validationSignup[5].textContent = ('Phone number: ' + telSignup.value);
-        validationSignup[5].style.color = 'green';
+        telValidationRes.textContent = ('Phone number: ' + telSignup.value);
+        telValidationRes.style.color = 'green';
     }
 
     if (validateLocation()) { //city
-        validationSignup[6].textContent = 'Invalid city';
-        validationSignup[6].style.color = 'red';
+        locValidationRes.textContent = 'Invalid city';
+        locValidationRes.style.color = 'red';
     }
     else {
-        validationSignup[6].textContent = ('City: ' + locationSignup.value);
-        validationSignup[6].style.color = 'green';
+        locValidationRes.textContent = ('City: ' + locationSignup.value);
+        locValidationRes.style.color = 'green';
     }
 
     if (validatePostalCode()) { //address
-        validationSignup[7].textContent = 'Invalid address';
-        validationSignup[7].style.color = 'red';
+        addressValidationRes.textContent = 'Invalid address';
+        addressValidationRes.style.color = 'red';
     }
     else {
-        validationSignup[7].textContent = ('Address: ' + addressSignup.value);
-        validationSignup[7].style.color = 'green'; 
+        addressValidationRes.textContent = ('Address: ' + addressSignup.value);
+        addressValidationRes.style.color = 'green'; 
     }
 
     if (validateEmail()) { //postal code
-        validationSignup[8].textContent = 'Invalid postal code';
-        validationSignup[8].style.color = 'red';
+        postValidationRes.textContent = 'Invalid postal code';
+        postValidationRes.style.color = 'red';
     }
     else {
-        validationSignup[8].textContent = ('Postal code: ' + postalCodeSignup.value);
-        validationSignup[8].style.color = 'green';
+        postValidationRes.textContent = ('Postal code: ' + postalCodeSignup.value);
+        postValidationRes.style.color = 'green';
     }
 
     if (validatePassword()) {
-        validationSignup[9].textContent = 'Invalid password';
-        validationSignup[9].style.color = 'red';
+        passValidationResSignup.textContent = 'Invalid password';
+        passValidationResSignup.style.color = 'red';
     }
     else {
-        validationSignup[9].textContent = ('Password: ' + passwordSignup.value);
-        validationSignup[9].style.color = 'green';
+        passValidationResSignup.textContent = ('Password: ' + passwordSignup.value);
+        passValidationResSignup.style.color = 'green';
     }
 
     if (matchPassword()) {
-        validationSignup[10].textContent = 'Passwords dont match';
-        validationSignup[10].style.color = 'red';
+        passRepeatValidationRes.textContent = 'Passwords dont match';
+        passRepeatValidationRes.style.color = 'red';
     }
     else {
-        validationSignup[10].textContent = 'Password validation: OK';
-        validationSignup[10].style.color = 'green';
+        passRepeatValidationRes.textContent = 'Password validation: OK';
+        passRepeatValidationRes.style.color = 'green';
     }
+}
+
+// fetch
+
+submitSignup.addEventListener('click', sendData);
+
+function sendData() {
+    dateConverted = convertDate(dateSignup.value);
+    addressNoSpace = addressSignup.value.replace(' ', '%20');
+
+    var keys = ['name=', 'lastName=', 'dni=', 'dob=', 'email=', 'phone=', 'city=', 'address=', 'zip=', 'password='];
+    var values = [nameSignup.value, lastnameSignup.value, dniSignup.value, dateConverted, emailSignup.value,
+        telSignup.value, locationSignup.value, addressNoSpace, postalCodeSignup.value, passwordSignup.value];
+    var concating = [];
+
+    for (let i = 0; i < keys.length; i++) {
+        concating.push([keys[i].concat(values[i]).trim()]);
+    }
+
+    concatingString = concating.join('&');
+
+    var urlConcat = 'https://basp-m2022-api-rest-server.herokuapp.com/signup?';
+    urlConcat += concatingString;
+
+    if (!validateName() & !validateLastname() & !validateDNI() & !validateDate() & !validateEmail() &  !validateTel() 
+    & !validateLocation() & !validateAddress() &  !validatePostalCode() & !validatePassword() & !matchPassword()) {
+        fetch(urlConcat)
+        .then(function (response) { 
+          return response.json()
+        })
+        .then(function (jsonResponse) { 
+            if (jsonResponse.success == true) {
+                signupResponse.textContent = 'Success! ' + jsonResponse.msg;
+                closeModal.setAttribute('href', '../views/index.html');
+                var data = jsonResponse.data;
+                saveLocalStorage(data);
+            }
+            else {
+                console.log(jsonResponse);
+                signupResponse.textContent = 'Error! ' + jsonResponse.errors[0].msg;
+            }
+        })
+        .catch(function(error) {
+            console.log(error);
+        })
+    }
+}
+
+// LOCALSTORAGE
+
+if (localStorage.getItem('id') != null) {
+    nameSignup.value = localStorage.getItem('name');
+    lastnameSignup.value = localStorage.getItem('lastname');
+    dniSignup.value = localStorage.getItem('dni');
+    dateSignup.value = localStorage.getItem('birthdate');
+    emailSignup.value = localStorage.getItem('email');
+    telSignup.value = localStorage.getItem('phone');
+    locationSignup.value = localStorage.getItem('city');
+    addressSignup.value = localStorage.getItem('address');
+    postalCodeSignup.value = localStorage.getItem('postalcode');
+    passwordSignup.value = localStorage.getItem('password');
 }

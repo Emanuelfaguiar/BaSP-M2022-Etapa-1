@@ -68,21 +68,55 @@ input[type=submit]{
     cursor: pointer;
 }
 
-.hidden{
+#signup-validation-container {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    
+    overflow: scroll;
+}
+
+#signup-validation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    top: 120px;
+    width: 50%;
+    max-width: 350px;
+    min-width: 200px;
+    height: 460px;
+    padding: 15px;
+    background-color: #EBEBF0;
+    box-shadow: 0px 4px 15px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.hidden {
     visibility: hidden;
 }
 
-.hidden h3 {
-    margin-bottom: 3px;
+#signup-validation h3 {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 20px;
 }
 
-.signup-validation-result{
-    margin-bottom: 2px;
+.signup-validation-result, #signup-response {
+    margin: 10px 0;
+    font-size: 13px;
 }
 
 .close-modal-container {
     width: 80%;
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 #close-modal {

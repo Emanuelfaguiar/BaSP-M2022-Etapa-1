@@ -69,9 +69,9 @@
                 <div class='login-form-container'>
                     <form method='get'>
                         <div class="input-form">
-                            <input type='email' name='email' placeholder='Email'>
+                            <input id="input-email" type='email' name='email' placeholder='Email'>
                             <p class="msg-error"></p>
-                            <input type='password' placeholder='Password'>
+                            <input id="input-password" type='password' placeholder='Password'>
                             <p class="msg-error"></p>
                         </div>
                         <div class='chekbox-container'>
@@ -80,14 +80,16 @@
                         </div>
                     </form>
                     <a href='#' target='blanck'>Forgot password?</a>
-                    <input type="submit" name="login-button" value="Continue">
+                    <input id="input-submit" type="submit" name="login-button" value="Continue">
                 </div>
             </div>
-            <div class="login-validation-container">
-                <div id="login-validation">
+            <div id="login-validation-container" class="hidden">
+                <div id="login-validation" class="hidden">
                     <h3>Validation Result</h3>
                     <p class="login-validation-result"></p>
                     <p class="login-validation-result"></p>
+                    <p id="login-response"></p>
+                    <a id="close-modal">Close</a>
                 </div>
             </div>
         </main>

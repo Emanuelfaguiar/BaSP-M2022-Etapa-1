@@ -1,8 +1,12 @@
-var emailLogin = document.querySelector('input[type="email"]')
-var passwordLogin = document.querySelector('input[type="password"]');
+var emailLogin = document.getElementById('input-email')
+var passwordLogin = document.getElementById('input-password');
 var loginErrors = document.getElementsByClassName('msg-error');
-var submitLogin = document.querySelector('input[type="submit"]');
+var submitLogin = document.getElementById('input-submit');
 var validationResults = document.getElementsByClassName('login-validation-result');
+var modalContainer = document.getElementById('login-validation-container');
+var modalBox = document.getElementById('login-validation');
+var LoginResponse = document.getElementById('login-response');
+var closeModal = document.getElementById('close-modal');
 
 // EMAIL
 
@@ -75,29 +79,78 @@ passwordLogin.addEventListener('focus', function(){
 
 // lOGIN RESULTS
 
-validationBox = document.getElementById('login-validation');
 submitLogin.addEventListener('click', showResultsLogin);
+closeModal.addEventListener('click', function(){
+    modalContainer.classList.add('hidden');
+    modalBox.classList.add('hidden');
+})
 
-validationBox.style.display = 'none';
+var emailValidationRes = validationResults[0];
+var passValidationRes = validationResults[1];
 
 function showResultsLogin() {
     event.preventDefault();
-    validationBox.style.display = 'inherit';
+
+    modalContainer.classList.remove('hidden');
+    modalBox.classList.remove('hidden');
+
     if (validateEmail()) {
-        validationResults[0].textContent = 'Error: invalid email';
-        validationResults[0].style.color = 'red';
+        emailValidationRes.textContent = 'Error: invalid email';
+        emailValidationRes.style.color = 'red';
     }
     else {
-        validationResults[0].textContent = ('Email: ' + emailLogin.value);
-        validationResults[0].style.color = 'green';
+        emailValidationRes.textContent = ('Email: ' + emailLogin.value);
+        emailValidationRes.style.color = 'green';
     }
 
     if (validatePassword()) {
-        validationResults[1].textContent = 'Error: please check passwords requirements';
-        validationResults[1].style.color = 'red';
+        passValidationRes.textContent = 'Error: please check passwords requirements';
+        passValidationRes.style.color = 'red';
     }
     else {
-        validationResults[1].textContent = ('Password: ' + passwordLogin.value);
-        validationResults[1].style.color = 'green';
+        passValidationRes.textContent = ('Password: ' + passwordLogin.value);
+        passValidationRes.style.color = 'green';
     }
 }
+
+// FETCH
+
+submitLogin.addEventListener('click', sendData);
+
+function sendData() {
+    var keys = ['email=', 'password='];
+    var values = [emailLogin.value, passwordLogin.value];
+    var concating = [];
+
+    for (let i = 0; i < keys.length; i++) {
+        concating.push([keys[i].concat(values[i])]);
+    }
+    concatingString = concating.join('&');
+
+    var urlConcat = 'https://basp-m2022-api-rest-server.herokuapp.com/login?';
+    urlConcat += concatingString;
+
+    if (!validateEmail() & !validatePassword()) {
+        fetch(urlConcat)
+        .then(function (response) { 
+          return response.json();
+        })
+        .then(function (jsonResponse) { 
+            var jsonResponseVar = jsonResponse.msg;
+            if (jsonResponse.success == true) {
+                LoginResponse.textContent = 'Success! ' + jsonResponseVar;
+                closeModal.setAttribute('href', '../views/index.html');
+                localStorage.setItem('emailLogin', emailLogin.value);
+                localStorage.setItem('passwordLogin', passwordLogin.value);
+            }
+            else {
+                LoginResponse.textContent = 'Error! ' + jsonResponseVar;
+            }
+        })
+    }
+}
+
+// LOCALSTORAGE
+
+emailLogin.value = localStorage.getItem('emailLogin');
+passwordLogin.value = localStorage.getItem('passwordLogin');

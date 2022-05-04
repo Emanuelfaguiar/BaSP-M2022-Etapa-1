@@ -140,8 +140,8 @@ telSignup.addEventListener('blur', validateTel);
 
 function validateTel() {
     if (telSignup.value.length !== 10) {
-        signupErrors[4].style.display = 'inherit';
-        signupErrors[4].textContent = '* Phone number must have 10 numbers';
+        signupErrors[5].style.display = 'inherit';
+        signupErrors[5].textContent = '* Phone number must have 10 numbers';
         telSignup.style.border = '2px solid red';
         return true
     }
@@ -151,7 +151,7 @@ function validateTel() {
 }
 
 telSignup.addEventListener('focus', function(){
-    signupErrors[4].style.display = 'none';
+    signupErrors[5].style.display = 'none';
 })
 
 // ADDRESS
@@ -161,14 +161,14 @@ addressSignup.addEventListener('blur', validateAddress);
 
 function validateAddress() {
     if (addressSignup.value.length < 5) {
-        signupErrors[5].style.display = 'inherit';
-        signupErrors[5].textContent = '* Address must contain at least 5 caracters';
+        signupErrors[7].style.display = 'inherit';
+        signupErrors[7].textContent = '* Address must contain at least 5 caracters';
         addressSignup.style.border = '2px solid red';
         return true
     }
     else if(!validation2(addressSignup)) {
-        signupErrors[5].style.display = 'inherit';
-        signupErrors[5].textContent = '* Address must contain letters, numbers and a space';
+        signupErrors[7].style.display = 'inherit';
+        signupErrors[7].textContent = '* Address must contain letters, numbers and a space';
         addressSignup.style.border = '2px solid red';
         return true
     }
@@ -178,7 +178,7 @@ function validateAddress() {
 }
 
 addressSignup.addEventListener('focus', function(){
-    signupErrors[5].style.display = 'none';
+    signupErrors[7].style.display = 'none';
 })
 
 // CITY
@@ -207,8 +207,8 @@ postalCodeSignup.addEventListener('blur', validatePostalCode);
 
 function validatePostalCode() {
     if (postalCodeSignup.value.length < 4 || postalCodeSignup.value.length > 5) {
-        signupErrors[7].style.display = 'inherit';
-        signupErrors[7].textContent = '* Postal code must contain between 4 and 5 numbers';
+        signupErrors[8].style.display = 'inherit';
+        signupErrors[8].textContent = '* Postal code must contain between 4 and 5 numbers';
         postalCodeSignup.style.border = '2px solid red';
         return true
     }
@@ -218,7 +218,7 @@ function validatePostalCode() {
 }
 
 postalCodeSignup.addEventListener('focus', function(){
-    signupErrors[7].style.display = 'none';
+    signupErrors[8].style.display = 'none';
 })
 
 // EMAIL
@@ -229,8 +229,8 @@ var emailRegex = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
 
 function validateEmail() {
     if (!emailRegex.test(emailSignup.value)) {
-        signupErrors[8].style.display = 'inherit';
-        signupErrors[8].textContent = '* Invalid email';
+        signupErrors[4].style.display = 'inherit';
+        signupErrors[4].textContent = '* Invalid email';
         emailSignup.style.border = '2px solid red';
         return true
     }
@@ -240,7 +240,7 @@ function validateEmail() {
 }
 
 emailSignup.addEventListener('focus', function(){
-    signupErrors[8].style.display = 'none';
+    signupErrors[4].style.display = 'none';
 })
 
 // PASSWORD
@@ -365,7 +365,7 @@ function showResultsSignup() {
     validationBoxS.style.display = 'inherit';
     validationBoxS.scrollIntoView(true);
     if (validateName()) {
-        validationSignup[0].textContent = 'Invalid name: please check all the requirements';
+        validationSignup[0].textContent = 'Invalid name';
         validationSignup[0].style.color = 'red';
     }
     else {
@@ -374,7 +374,7 @@ function showResultsSignup() {
     }
 
     if (validateLastname()) {
-        validationSignup[1].textContent = 'Invalid last name: please check all the requirements';
+        validationSignup[1].textContent = 'Invalid last name';
         validationSignup[1].style.color = 'red';
     }
     else {
@@ -383,7 +383,7 @@ function showResultsSignup() {
     }
 
     if (validateDNI()) {
-        validationSignup[2].textContent = 'Invalid DNI: please check all the requirements';
+        validationSignup[2].textContent = 'Invalid DNI';
         validationSignup[2].style.color = 'red';
     }
     else {
@@ -392,7 +392,7 @@ function showResultsSignup() {
     }
 
     if (validateDate()) {
-        validationSignup[3].textContent = 'Invalid birth date: please check all the requirements';
+        validationSignup[3].textContent = 'Invalid birth date';
         validationSignup[3].style.color = 'red';
     }
     else {
@@ -401,25 +401,25 @@ function showResultsSignup() {
     }
 
     if (validateTel()) {
-        validationSignup[4].textContent = 'Invalid phone number: please check all the requirements';
+        validationSignup[4].textContent = 'Invalid email';
         validationSignup[4].style.color = 'red';
     }
-    else {
-        validationSignup[4].textContent = ('Phone number: ' + telSignup.value);
+    else { 
+        validationSignup[4].textContent = ('Email: ' + emailSignup.value);
         validationSignup[4].style.color = 'green';
     }
 
-    if (validateAddress()) {
-        validationSignup[5].textContent = 'Invalid address: please check all the requirements';
+    if (validateAddress()) { //phone number
+        validationSignup[5].textContent = 'Invalid phone number';
         validationSignup[5].style.color = 'red';
     }
     else {
-        validationSignup[5].textContent = ('Address: ' + addressSignup.value);
+        validationSignup[5].textContent = ('Phone number: ' + telSignup.value);
         validationSignup[5].style.color = 'green';
     }
 
-    if (validateLocation()) {
-        validationSignup[6].textContent = 'Invalid city: please check all the requirementss';
+    if (validateLocation()) { //city
+        validationSignup[6].textContent = 'Invalid city';
         validationSignup[6].style.color = 'red';
     }
     else {
@@ -427,26 +427,26 @@ function showResultsSignup() {
         validationSignup[6].style.color = 'green';
     }
 
-    if (validatePostalCode()) {
-        validationSignup[7].textContent = 'Invalid postal code: please check all the requirements';
+    if (validatePostalCode()) { //address
+        validationSignup[7].textContent = 'Invalid address';
         validationSignup[7].style.color = 'red';
     }
     else {
-        validationSignup[7].textContent = ('Postal code: ' + postalCodeSignup.value);
-        validationSignup[7].style.color = 'green';
+        validationSignup[7].textContent = ('Address: ' + addressSignup.value);
+        validationSignup[7].style.color = 'green'; 
     }
 
-    if (validateEmail()) {
-        validationSignup[8].textContent = 'Invalid email';
+    if (validateEmail()) { //postal code
+        validationSignup[8].textContent = 'Invalid postal code';
         validationSignup[8].style.color = 'red';
     }
     else {
-        validationSignup[8].textContent = ('Email: ' + emailSignup.value);
+        validationSignup[8].textContent = ('Postal code: ' + postalCodeSignup.value);
         validationSignup[8].style.color = 'green';
     }
 
     if (validatePassword()) {
-        validationSignup[9].textContent = 'Invalid password: please check all the requirements';
+        validationSignup[9].textContent = 'Invalid password';
         validationSignup[9].style.color = 'red';
     }
     else {

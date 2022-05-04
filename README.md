@@ -20,7 +20,8 @@ GitHub direct page: https://emanuelfaguiar.github.io/BaSP-M2022-Etapa-1/semana-0
 These folder have 4 carpets. Witch one with files of differents code's type (javascript, css and html).
 All those codes are for a responsive landing, login and register page, separate by name and code's type.
 
-GitHub direct page: https://github.com/Emanuelfaguiar/BaSP-M2022-Etapa-1/tree/master/semana-06
+GitHub direct page: https://emanuelfaguiar.github.io/BaSP-M2022-Etapa-1/semana-06/index.html
+
 
 # WEEK 07 - JavaScript Storage
 
@@ -30,6 +31,9 @@ When we click the buttons "continue", the all validated form data is sent to a s
 In the login page, the message of succes appears ONLY when entering an existing user (in this case: rose@radiumtocket.com / password: BaSP2022).
 
 In the sign up page, the success' message will appear only when all the inputs are correctly filled, if any error were found, the server will send a error message showing what needs to be fixed.
+
+GitHub direct page: https://emanuelfaguiar.github.io/BaSP-M2022-Etapa-1/semana-07/index.html
+
 
 ```
     Author: Emanuel Figueiredo de Aguiar
